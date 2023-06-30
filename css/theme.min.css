@@ -6,6 +6,11 @@ html {
   line-height: 1.15
 }
 
+p,
+ol {
+  font-family: Menlo, Monaco, Courier New, monospace, monospace
+}
+
 main {
   display: block
 }
