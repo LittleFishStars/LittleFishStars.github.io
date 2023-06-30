@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://littlefishstars.github.io/yl_start/other/</loc>
+    <lastmod>2023-06-30T15:18:27+08:00</lastmod>
+  </url><url>
     <loc>https://littlefishstars.github.io/yl_start/1/</loc>
     <lastmod>2023-06-30T15:10:03+08:00</lastmod>
   </url><url>
     <loc>https://littlefishstars.github.io/yl_start/</loc>
     <lastmod>2023-06-30T15:08:29+08:00</lastmod>
   </url><url>
-    <loc>https://littlefishstars.github.io/yl_start/%E6%B3%9B%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://littlefishstars.github.io/yl_start/other/%E6%B3%9B%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-06-30T15:07:38+08:00</lastmod>
   </url><url>
     <loc>https://littlefishstars.github.io/</loc>
