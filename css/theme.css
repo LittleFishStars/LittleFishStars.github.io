@@ -543,11 +543,11 @@ dd {
 }
 
 blockquote {
+  font-size: 1rem;
   color: #999;
-  padding: 1.6666666667rem;
-  background-color: #f4f4f4;
-  border-left: 4px solid #f0f0f0;
-  border-radius: 0.2rem;
+  border-left: .2rem solid #dfe2e5;
+  margin: 1rem 0;
+  padding: .25rem 0 .25rem 1rem;
 }
 
 code,
