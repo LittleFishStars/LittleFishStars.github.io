@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>简介 on 空</title>
     <link>https://littlefishstars.github.io/</link>
@@ -8,7 +8,16 @@
     <language>zh-cn</language>
     <lastBuildDate>Fri, 30 Jun 2023 15:06:37 +0800</lastBuildDate><atom:link href="https://littlefishstars.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>第二章 泛世界</title>
+      <title>第一章 国家的防备</title>
+      <link>https://littlefishstars.github.io/yl_start/2/page1/</link>
+      <pubDate>Tue, 25 Jul 2023 21:27:20 +0800</pubDate>
+      
+      <guid>https://littlefishstars.github.io/yl_start/2/page1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>第二章 旅途开始之前</title>
       <link>https://littlefishstars.github.io/yl_start/1/page2/</link>
       <pubDate>Fri, 30 Jun 2023 19:35:39 +0800</pubDate>
       
