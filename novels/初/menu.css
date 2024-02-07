@@ -1,0 +1,106 @@
+body {
+    background-color: #E6E1D6;
+    padding-top: 50px;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 700px;
+    background-color: #F2EEE5;
+    border-radius: 32px;
+    padding: 40px 64px;
+    color: #000;
+}
+
+#title {
+    font-size: 18px;
+}
+
+#page {
+    font-size: 1.5em;
+}
+
+#roll {
+    font-size: 16px;
+    color: #4f4f4f;
+}
+
+#content {
+    line-height: 30px;
+}
+
+#end {
+    background-color: #EAE7DE;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 32px;
+}
+
+#vr {
+    color: #aeaeae;
+}
+
+a {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.change {
+    width: 50%;
+    text-align: center;
+}
+
+.roll {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+    visibility: visible;
+}
+
+li {
+    list-style: none outside none;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 50%;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 35px;
+    padding: 5px;
+}
+
+.name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.rollname::after {
+    content: "收起";
+    color: #939393;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nh::after {
+    content: "展开";
+}
+
+.rollname {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 10px 16px;
+    margin-bottom: 0px;
+    background-color: #EAE7DE;
+}
