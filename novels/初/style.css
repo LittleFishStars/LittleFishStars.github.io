@@ -1,11 +1,11 @@
 body {
     background-color: #E6E1D6;
     padding-top: 50px;
+    font-size: medium;
 }
 
 main {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 60%;
     max-width: 700px;
     background-color: #F2EEE5;
@@ -17,15 +17,15 @@ main {
 }
 
 #title {
-    font-size: 18px;
+    font-size: x-large;
 }
 
 #page {
-    font-size: 1.5em;
+    font-size: xx-large;
 }
 
 #roll {
-    font-size: 16px;
+    font-size: large;
     color: #4f4f4f;
 }
 
