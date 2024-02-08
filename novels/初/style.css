@@ -58,7 +58,7 @@ a {
     text-align: center;
 }
 
-@media only screen and (max-aspect-ratio: 3/5) {
+@media only screen and (max-aspect-ratio: 2/3) {
     body {
         padding: 0px;
     }

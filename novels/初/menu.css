@@ -57,10 +57,19 @@ a {
     font-size: medium;
 }
 
-@media only screen and (max-aspect-ratio: 3/5) {
+@media only screen and (max-aspect-ratio: 2/3) {
     .page {
         width: 100%;
         line-height: 50px;
+    }
+
+    .rollname {
+        padding: 16px 20px;
+        font-size: xx-large;
+    }
+
+    .rollname::after {
+        font-size: medium;
     }
 
     a {
