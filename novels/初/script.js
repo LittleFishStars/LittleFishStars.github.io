@@ -40,7 +40,7 @@ Http.onreadystatechange = (e) => {
       for (let index = 0; index < data.length; index++) {
         const element_ = data[index];
         const url = window.location.href.split("?")[0];
-        if ((element_["recordId"][0] = last)) {
+        if ((element_["recordId"] == last)) {
           lasturl =
             url +
             "?page=" +
@@ -49,7 +49,7 @@ Http.onreadystatechange = (e) => {
             element_["fields"]["卷"];
           document.getElementById("last").href = lasturl;
         }
-        if ((element_["recordId"][0] = next)) {
+        if ((element_["recordId"] == next)) {
           nexturl =
             url +
             "?page=" +
