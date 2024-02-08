@@ -52,3 +52,17 @@ li {
     margin-bottom: 0px;
     background-color: #EAE7DE;
 }
+
+a {
+    font-size: medium;
+}
+
+@media only screen and (max-aspect-ratio: 3/5) {
+    .page {
+        width: 100%;
+    }
+
+    a {
+        font-size: xx-large;
+    }
+}
