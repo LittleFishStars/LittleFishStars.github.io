@@ -58,6 +58,11 @@ a {
 }
 
 @media only screen and (max-aspect-ratio: 2/3) {
+    body {
+        font-family: "方正幼线简体";
+        font-weight: bold;
+    }
+
     .page {
         width: 100%;
         line-height: 50px;
