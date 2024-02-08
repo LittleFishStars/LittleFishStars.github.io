@@ -59,8 +59,8 @@ a {
 
 @media only screen and (max-aspect-ratio: 2/3) {
     body {
-        font-family: "方正幼线简体";
-        font-weight: bold;
+        font-family: "../../font/FZYXJW.TTF";
+        font-weight: 400;
     }
 
     .page {
