@@ -28,11 +28,6 @@ Http.onreadystatechange = (e) => {
   for (let index = 0; index < data.length; index++) {
     const element = data[index]["fields"];
     if (element["卷"] == roll && element["章"] == page) {
-      var content =
-        "<p>" +
-        element["内容"].split(/[(\r\n)\r\n]+/).join("</p>\n<p>") +
-        "</p>";
-      document.getElementById("content").innerHTML = content;
       document.getElementById("page").innerText = page;
       document.getElementById("roll").innerText = roll;
       const last = element["上一章"];
@@ -49,7 +44,7 @@ Http.onreadystatechange = (e) => {
             element_["fields"]["卷"];
           document.getElementById("last").href = lasturl;
         }
-        if ((element_["recordId"] == next)) {
+        if ((element_["recordId"] == next && element_["状态"] == "发布")) {
           nexturl =
             url +
             "?page=" +
@@ -58,6 +53,15 @@ Http.onreadystatechange = (e) => {
             element_["fields"]["卷"];
           document.getElementById("next").href = nexturl;
         }
+      }
+      if (element["状态"] == "发布"){
+        var content =
+          "<p>" +
+          element["内容"].split(/[(\r\n)\r\n]+/).join("</p>\n<p>") +
+          "</p>";
+        document.getElementById("content").innerHTML = content;
+      } else {
+        window.location.href = lasturl
       }
     }
   }

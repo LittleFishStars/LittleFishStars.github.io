@@ -14,10 +14,12 @@ Http.onreadystatechange = (e) => {
   var all = {};
   for (let index = 0; index < data.length; index++) {
     const element = data[index]["fields"];
-    if (all[element["卷"]] == null) {
-      all[element["卷"]] = [element["章"]];
-    } else {
-      all[element["卷"]].push(element["章"]);
+    if (element["状态"] == "发布"){
+      if (all[element["卷"]] == null) {
+        all[element["卷"]] = [element["章"]];
+      } else {
+        all[element["卷"]].push(element["章"]);
+      }
     }
   }
   var list = "";
