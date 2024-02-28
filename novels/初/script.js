@@ -28,40 +28,46 @@ Http.onreadystatechange = (e) => {
   for (let index = 0; index < data.length; index++) {
     const element = data[index]["fields"];
     if (element["卷"] == roll && element["章"] == page) {
-      document.getElementById("page").innerText = page;
-      document.getElementById("roll").innerText = roll;
+      if (element["状态"] == "发布") {
+        var content =
+          "<p>" +
+          element["内容"].split(/[(\r\n)\r\n]+/).join("</p>\n<p>") +
+          "</p>";
+        document.getElementById("content").innerHTML = content;
+        document.getElementById("page").innerText = page;
+        document.getElementById("roll").innerText = roll;
+      }
       const last = element["上一章"];
       const next = element["下一章"];
+      var lasturl,
+        nexturl = "";
       for (let index = 0; index < data.length; index++) {
         const element_ = data[index];
         const url = window.location.href.split("?")[0];
-        if ((element_["recordId"] == last)) {
+        if (element_["recordId"] == last) {
           lasturl =
             url +
             "?page=" +
             element_["fields"]["章"] +
             "&roll=" +
             element_["fields"]["卷"];
-          document.getElementById("last").href = lasturl;
         }
-        if ((element_["recordId"] == next && element_["状态"] == "发布")) {
+        if (element_["recordId"] == next && element_["状态"] == "发布") {
           nexturl =
             url +
             "?page=" +
             element_["fields"]["章"] +
             "&roll=" +
             element_["fields"]["卷"];
-          document.getElementById("next").href = nexturl;
+        } else {
+          nexturl = "./menu.html";
         }
       }
-      if (element["状态"] == "发布"){
-        var content =
-          "<p>" +
-          element["内容"].split(/[(\r\n)\r\n]+/).join("</p>\n<p>") +
-          "</p>";
-        document.getElementById("content").innerHTML = content;
+      if (element["状态"] == "发布") {
+        document.getElementById("last").href = lasturl;
+        document.getElementById("next").href = nexturl;
       } else {
-        window.location.href = lasturl
+        window.location.replace(lasturl);
       }
     }
   }
