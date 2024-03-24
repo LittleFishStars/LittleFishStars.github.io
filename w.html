@@ -2,23 +2,204 @@
 
 <head>
     <title>解密</title>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
     <style>
-        body{
-            background-color: #ffe2fba3;
+        @font-face {
+            font-family: "得意黑";
+            /* 自定义字体的名字 */
+            src: url("font/SmileySans-Oblique.otf") format("opentype");
+            /* 字体文件的路径和格式 */
         }
 
-        header{
+        body {
+            background-color: #fff4fda3;
+            font-family: "得意黑";
+            font-weight: normal;
+            font-size: large;
+            line-height: 28px;
+            letter-spacing: 2px;
+            color: #332531;
+        }
+
+        .first {
             margin: 32px;
             padding: 16px;
+            border: #bda8bb8a;
+            border-style: solid;
+            border-width: 0.1px;
             border-radius: 10px;
-            shape-margin: 4px;
-            background-color: #ffffffc7;
+            box-shadow: 0px 0px 12px #f7c8f0cc;
+            background-color: #ffffffe8;
+        }
+
+        .second {
+            background-color: #fff7fd9e;
+            border-radius: 12px;
+            box-shadow: 0px 0px 4px #fbd1f1cf;
+            padding: 12px;
+            margin: 16px 10px;
+        }
+
+        .third {
+            padding: 16px;
+            border: #bda8bb8a;
+            border-radius: 10px;
+            background-color: #ffffff;
+            margin: 16px 8px;
+            box-shadow: 0px 0px 2px #f7c8f0cc;
+        }
+
+        hr {
+            color: white;
+        }
+
+        input {
+            border: none;
+            border-radius: 4px;
+            margin: 2px 4px;
+            padding: 6px 8px;
+            box-shadow: 0px 0px 2px #c19ccaa6;
+            cursor: text;
+        }
+
+        button {
+            border: none;
+            background-color: #fffafe;
+            border-radius: 4px;
+            padding: 5px 8px;
+            box-shadow: 0px 0px 2px #c19ccaa6;
+            cursor: pointer;
+        }
+
+        #n {
+            word-wrap: break-word;
+            word-break: break-all;
         }
     </style>
 </head>
 
 <body>
-    <header>恭喜你完成之前的解密，顺利找到了这个网页，下面是之前步骤的标准答案，不知道你是否完全破解了呢？不过既然能找到这个网站，想必也差不了多少吧。</header>
+    <header class="first">恭喜你完成之前的解密，顺利找到了这个网页，下面是之前步骤的标准答案。
+        <div id="answer" class="second">
+            <strong>纸条上的文字：</strong>
+            <div class="third">
+                &emsp;Good for you on discovering this note and deciphering the correct content, marking the official
+                start
+                of decryption. Below is a ciphertext, please decipher it, which contains the next steps. Tip: Caesar, A
+                website address
+                <br>
+                &emsp;littlefishstars.github.io/w.html
+            </div>
+            <strong>翻译：</strong>
+            <div class="third">
+                &emsp;恭喜你发现了这一张纸条并且破译出了正确的内容，这标志着解密的正式开始。下面是一段密文，请破译它，里面包含了下一步的内容。提示：凯撒，一个网址
+                <br>
+                &emsp;littlefishstars.github.io/w.html
+            </div>
+        </div>
+        不知道你是否完全破解了呢？不过既然能找到这个网站，想必也差不了多少吧。接下来请看下一个谜题：
+    </header>
+    <main class="first">
+        再次看看那张纸条，有没有发现符号没有对齐呢？那其实是我故意的，在这其中包含了一个6位数的密码，尝试破解它吧！
+        <!--br><span style="font-size: small;">提示：隐写术</span-->
+        <br>
+        <script>
+            function chack_password1() {
+                let password = document.getElementById("password1").value
+                if (md5(password) == "e8fb5164c7a3db445fed16124b136d32") { // 372613
+                    document.getElementById("next").style.display = "block"
+                    document.getElementById("no1").style.display = "none"
+
+                    document.getElementsByClassName("one")[0].style.display = "none"
+                    document.getElementsByClassName("one")[1].style.display = "none"
+                } else {
+                    document.getElementById("no1").style.display = "contents"
+                }
+            }
+        </script>
+        <input class="one" id="password1" type="text" placeholder="密码" maxlength="6">
+        <button class="one" onclick="chack_password1()">确定</button>
+        <b id="no1" style="display: none;">错了！</b>
+        <div id="next" class="second" style="display: none;">
+        <!--div id="next" class="second"-->
+            <b>恭喜你答对了！接下来是一个特殊的谜题：</b>
+            <br>
+            &emsp;除了你以外，这个谜题我还给了另一个人，请找到她，然后把你们俩的纸条拼在一起，你们将得到下一步的密码。
+            <br>
+            &emsp;另外，别忘了把每一步得到的密码都记录下来哦！这个网站并不会保存你的进度。
+            <br>
+            <script>
+                function chack_password2() {
+                    let password = document.getElementById("password2").value
+                    if (md5(password) == "fa60ef3b9f37fb3dd73da6c3fd9ee3d1") { //492726
+                        document.getElementById("end").style.display = "block"
+                        document.getElementById("no2").style.display = "none"
+
+                        document.getElementsByClassName("two")[0].style.display = "none"
+                        document.getElementsByClassName("two")[1].style.display = "none"
+                    } else {
+                        document.getElementById("no2").style.display = "contents"
+                    }
+                }
+            </script>
+            <input class="two" id="password2" type="text" placeholder="密码" maxlength="6">
+            <button class="two" onclick="chack_password2()">确定</button>
+            <b id="no2" style="display: none;">错了！</b>
+            <div id="end" class="third" style="display: none;">
+            <!--div id="end" class="third"-->
+                恭喜你们找到对方！不知道有没有些惊讶还是意料之中呢。接下来的解密就请你们一起完成吧！
+                <script>
+                    function go() {
+                        document.getElementById("double").style.display = "block"
+                    }
+                </script>
+                <button id="go" onclick="go()">Go</button>
+            </div>
+        </div>
+    </main>
+    <div id="double" class="first" style="display: none;">
+    <!--div id="double" class="first"-->
+        接下来的内容开始之前，先帮我填一张简单的表格吧！看看你们能不能填对呢？你们两个一定要一起看哦！
+        <script>
+            function chack_form() {
+                event.preventDefault()
+                let name = document.getElementById("list").name.value
+                let gender = document.getElementById("list").gender.value
+                let dream = document.getElementById("list").dream.value
+                if (md5(name) == "155542d822330e118eb05ac18f0856d7" &&
+                    md5(gender) == "273b9ae535de53399c86a9b83148a8ed" &&
+                    dream.search("萝莉") != -1) {
+                    document.getElementById("no3").style.display = "none"
+                    document.getElementById("start").style.display = "block"
+                } else {
+                    document.getElementById("no3").style.display = "contents"
+                }
+            }
+        </script>
+        <form id="list" class="second" action="" onsubmit="chack_form()">
+            <label>姓名：</label><input type="text" name="name" required>
+            <br>
+            <label>性别：</label>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">女</label>
+            <br>
+            <label>我的梦想：</label><input type="text" name="dream" required>
+            <br>
+            <button style="background-color: white;" type="submit">OK</button>
+            <b id="no3" style="display: none;">错了！</b>
+        </form>
+        <div id="start" style="display: none;">
+        <!--div id="start"-->
+            那接下来就是最后一步了，这次有个完全不同的加密方式，向着终点努力吧！
+            <!--br><span style="font-size: small;">提示：自指函数</span-->
+            <div id="n" class="second">
+                n=578843913092903396013862332494825569399815758140436326365070152461993797033773359156856513741922597359920719824316744244313515800339284058798491896817177576653729440351061534647928688694827731121752335271957658381636384166582518589103780302961227898853547915963385542859398959801082449074590770949408035137152922253846418430422198375918545057185017643148730175074582178997993143230546701032317575090110186828118950842622743436871591188732290954363994679715122015322248326133367512946930170846916479380374491548724832516731291585084287193765214
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
