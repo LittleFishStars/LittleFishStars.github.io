@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>粒子物理</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">粒子物理</h1>
+        <div id="bilibili">
+            <button class="videoButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                </svg>
+                <div class="videoText">
+                    视频
+                </div>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div id="fermions">
+            <h2>费米子</h2>
+            <div id="quarks">
+                <h2>夸克</h2>
+                <div id="up" class="card quark">
+                    <h3>上夸克</h3>
+                    <div class="massage">
+                        <p class="mass M">
+                            2.2
+                        </p>
+                        <p class="charge">
+                            <sup>2</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">u</p>
+                </div>
+                <div id="charm" class="card quark">
+                    <h3>粲夸克</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            1.275
+                        </p>
+                        <p class="charge">
+                            <sup>2</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">c</p>
+                </div>
+                <div id="top" class="card quark">
+                    <h3>顶夸克</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            172.76
+                        </p>
+                        <p class="charge">
+                            <sup>2</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">t</p>
+                </div>
+                <br>
+                <div id="down" class="card quark">
+                    <h3>下夸克</h3>
+                    <div class="massage">
+                        <p class="mass M">
+                            4.7
+                        </p>
+                        <p class="charge">
+                            -<sup>1</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">d</p>
+                </div>
+                <div id="strange" class="card quark">
+                    <h3>奇夸克</h3>
+                    <div class="massage">
+                        <p class="mass M">
+                            95
+                        </p>
+                        <p class="charge">
+                            -<sup>1</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">s</p>
+                </div>
+                <div id="bottom" class="card quark">
+                    <h3>底夸克</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            4.18
+                        </p>
+                        <p class="charge">
+                            -<sup>1</sup><span class="slash">&frasl;</span><sub>3</sub>
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle">b</p>
+                </div>
+            </div>
+            <br>
+            <div id="leptons">
+                <h2>轻子</h2>
+                <div id="electron" class="card lepton">
+                    <h3>电子</h3>
+                    <div class="massage">
+                        <p class="mass M">
+                            0.511
+                        </p>
+                        <p class="charge">
+                            -1
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 32px;">e<sup>-</sup></p>
+                </div>
+                <div id="muon" class="card lepton">
+                    <h3>μ子</h3>
+                    <div class="massage">
+                        <p class="mass M">
+                            105.6
+                        </p>
+                        <p class="charge">
+                            -1
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 32px;">μ<sup>-</sup></p>
+                </div>
+                <div id="tau" class="card lepton">
+                    <h3>τ子</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            1.776
+                        </p>
+                        <p class="charge">
+                            -1
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 32px;">τ<sup>-</sup></p>
+                </div>
+                <br>
+                <div id="Eneutrino" class="card lepton">
+                    <h3>电中微子</h3>
+                    <div class="massage">
+                        <p class="mass N"></p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 42px;">ν<sub>e</sub></p>
+                </div>
+                <div id="Mneutrino" class="card lepton">
+                    <h3>μ中微子</h3>
+                    <div class="massage">
+                        <p class="mass N"></p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 42px;">ν<sub>μ</sub></p>
+                </div>
+                <div id="Tneutrino" class="card lepton" style="display: inline-block;">
+                    <h3>τ中微子</h3>
+                    <div class="massage">
+                        <p class="mass N"></p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            <sup>1</sup><span class="slash">&frasl;</span><sub>2</sub>
+                        </p>
+                    </div>
+                    <p class="particle" style="line-height: 42px;">ν<sub>τ</sub></p>
+                </div>
+            </div>
+        </div>
+        <div id="bosons">
+            <h2>玻色子</h2>
+            <div id="gauge">
+                <h2>规范玻色子</h2>
+                <div id="gluon" class="card gauge">
+                    <h3>胶子</h3>
+                    <div class="massage">
+                        <p class="mass">
+                            0
+                        </p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            1
+                        </p>
+                    </div>
+                    <p class="particle">g</p>
+                </div>
+                <div id="photon" class="card gauge">
+                    <h3>光子</h3>
+                    <div class="massage">
+                        <p class="mass">
+                            0
+                        </p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            1
+                        </p>
+                    </div>
+                    <p class="particle">γ</p>
+                </div>
+                <div id="Zboson" class="card gauge">
+                    <h3>z玻色子</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            91.19
+                        </p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            1
+                        </p>
+                    </div>
+                    <p class="particle">z</p>
+                </div>
+                <div id="Wboson" class="card gauge">
+                    <h3>w玻色子</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            80.38
+                        </p>
+                        <p class="charge">
+                            ±1
+                        </p>
+                        <p class="spin">
+                            1
+                        </p>
+                    </div>
+                    <p class="particle">w</p>
+                </div>
+            </div>
+            <div id="scalar">
+                <h2>标量玻色子</h2>
+                <div id="higgs" class="card scalar">
+                    <h3>胶子</h3>
+                    <div class="massage">
+                        <p class="mass G">
+                            125.1
+                        </p>
+                        <p class="charge">
+                            0
+                        </p>
+                        <p class="spin">
+                            0
+                        </p>
+                    </div>
+                    <p class="particle">g</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

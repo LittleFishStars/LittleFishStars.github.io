@@ -1,0 +1,235 @@
+:root {
+    --bg-color: #030112;
+    --border: #3654ff;
+}
+
+@font-face {
+    font-family: "得意黑";
+    src: url("font/SmileySans-Oblique.otf") format("opentype");
+}
+
+* {
+    font-family: "得意黑";
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0px;
+}
+h2 {
+    margin: 10px;
+}
+h3 {
+    margin: 0px 0px 8px 0px;
+}
+
+sup,
+sub {
+    display: inline-block;
+    width: 6px;
+}
+.slash {
+    display: inline-block;
+    width: 9px;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+}
+
+#title {
+    margin: 16px;
+    display: inline-block;
+}
+
+#bilibili {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    margin-left: 16px;
+}
+
+main {
+    letter-spacing: 5px;
+    margin: auto;
+    padding: 8px 14px;
+    border: 3px solid #ccdbfa;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+#fermions {
+    border: 3px solid #FFDA00;
+    border-radius: 16px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#bosons {
+    border: 3px solid #008093;
+    border-radius: 16px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card {
+    border: 3px solid white;
+    border-radius: 16px;
+    margin: 8px 4px;
+    padding: 10px;
+    font-weight: bolder;
+    display: inline-block;
+}
+
+#quarks {
+    border: 3px solid #FBB03B;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.quark {
+    background-color: #F15A24;
+}
+
+#gauge {
+    border: 3px solid #00FFFF;
+    border-radius: 16px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gauge {
+    background-color: #0071BC;
+    display: block;
+    margin: 16px 4px;
+}
+
+#scalar {
+    border: 3px solid #FF00FF;
+    border-radius: 16px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.scalar {
+    background-color: #6F258F;
+    margin: 16px 4px;
+}
+
+.massage {
+    display: inline-block;
+    width: 155px;
+}
+
+.mass {
+    margin: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+}
+.mass::before {
+    content: "质量 =";
+    letter-spacing: 1px;
+}
+.M::after {
+    content: "MeV/c²";
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+.G::after {
+    content: "GeV/c²";
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.charge {
+    margin: 4px;
+}
+.charge::before {
+    content: "电荷量 =";
+    letter-spacing: 1px;
+}
+
+.spin {
+    margin: 4px;
+}
+.spin::before {
+    content: "自旋 =";
+    letter-spacing: 1px;
+}
+
+.particle {
+    border: 3px solid white;
+    border-radius: 26px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 26px;
+    background: radial-gradient(#3d578a, #ffffff);
+    margin: 4px;
+    position: relative;
+    display: inline-block;
+}
+
+
+#leptons {
+    border: 3px solid #00FF00;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.lepton {
+    background-color: #009245;
+}
+
+.N::before {
+    content: "质量 ≠ 0";
+    letter-spacing: 1px;
+}
+.N::after {
+    content: "";
+}
+
+
+
+/* video button */
+.videoButton {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 6em;
+    height: 2.9em;
+    border: var(--border) 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+}
+
+.videoButton:hover {
+    background-color: var(--border);
+    cursor: pointer;
+}
+
+.videoButton svg {
+    width: 1.6em;
+    margin: -0.2em 0.1em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+}
+
+.videoButton:hover svg {
+    transform: translateX(5px);
+}
+
+.videoText {
+    margin: 0 0.3em;
+}
