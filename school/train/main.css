@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "得意黑";
+    src: url("../../font/SmileySans-Oblique.otf") format("opentype");
+}
+
+body {
+    background-color: aliceblue;
+    font-family: "得意黑";
+    padding-top: 16px;
+}
+
+h1 {
+    margin: 8px;
+    font-size: larger;
+}
+h2 {
+    margin: 4px;
+    font-size: large;
+}
+
+li,ul {
+    list-style: none;
+    margin: 8px;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+    width: 64px;
+    height: 18px;
+    vertical-align: top;
+}
+
+li {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+}
+
+.railway {
+    border: 2px solid black;
+    border-radius: 16px;
+    width: fit-content;
+    min-width: 100px;
+    height: fit-content;
+    margin: auto;
+    margin-top: 16px;
+    padding: 4px;
+}
+
+#teacher {
+    border-color: red;
+}
