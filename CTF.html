@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>零宽字符隐写</title>
+    <link rel="icon" href="./images/icon.svg">
     <script>
         const ALL_CHAR = {
             '0': '\u200b',
@@ -43,6 +45,7 @@
             }
             code = [...START, ...code.split(''), ...END].join('');
             navigator.clipboard.writeText(code);
+            alert('复制成功！')
             console.log('复制成功！');
             return code;
         }
