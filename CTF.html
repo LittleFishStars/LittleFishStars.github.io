@@ -56,7 +56,7 @@
             const context = chars.match(new RegExp(pattern2, 'g'));
             const code = context.map(c => split([...c].filter(char => ALL_CHAR_.hasOwnProperty(char)).map(char => ALL_CHAR_[char]).join(''), 3));
             const strings = code.map(chunk => new TextDecoder().decode(new Uint8Array(chunk.map(str => parseInt(str, 8)))));
-            let decode = strings.map(i => i.slice(1, -1)).join('\n');
+            let decode = strings.map(i => i.slice(1, -1)).join('<br/>');
             document.getElementById("decode").innerHTML = decode
             console.log(decode);
             return decode;
