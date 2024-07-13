@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>零宽字符隐写</title>
+    <script>
+        const ALL_CHAR = {
+            '0': '\u200b',
+            '1': '\u200c',
+            '2': '\u200d',
+            '3': '\u200e',
+            '4': '\u202a',
+            '5': '\u202c',
+            '6': '\u202d',
+            '7': '\ufeff'
+        };
+
+        const ALL_CHAR_ = Object.fromEntries(Object.entries(ALL_CHAR).map(([k, v]) => [v, k]));
+        const START = [ALL_CHAR['0'], ALL_CHAR['0'], ALL_CHAR['1']];
+        const END = [ALL_CHAR['0'], ALL_CHAR['0'], ALL_CHAR['2']];
+
+        function split(string, length) {
+            const chunks = [];
+            for (let i = 0; i < string.length; i += length) {
+                chunks.push(string.substring(i, i + length));
+            }
+            return chunks;
+        }
+
+        function padZero(string, length) {
+            return (new Array(length).fill('0').join('') + string).slice(-length);
+        }
+
+        function encode() {
+            let text = document.getElementById("encodeText").value
+            console.log(text);
+            let code = '';
+            for (const byte of new TextEncoder().encode(text)) {
+                const octalStr = padZero(byte.toString(8), 3);
+                for (const char of octalStr) {
+                    code += ALL_CHAR[char];
+                }
+            }
+            code = [...START, ...code.split(''), ...END].join('');
+            navigator.clipboard.writeText(code);
+            console.log('复制成功！');
+            return code;
+        }
+
+        function decode() {
+            let text = document.getElementById("decodeText").value
+            const pattern1 = ['[', ...Object.values(ALL_CHAR).join(''), ']'].join('');
+            const pattern2 = [...START.join(''), '.*?', ...END.join('')].join('');
+            const chars = text.match(new RegExp(pattern1, 'g')).join('');
+            console.log(chars);
+            const context = chars.match(new RegExp(pattern2, 'g'));
+            const code = context.map(c => split([...c].filter(char => ALL_CHAR_.hasOwnProperty(char)).map(char => ALL_CHAR_[char]).join(''), 3));
+            const strings = code.map(chunk => new TextDecoder().decode(new Uint8Array(chunk.map(str => parseInt(str, 8)))));
+            let decode = strings.map(i => i.slice(1, -1)).join('\n');
+            document.getElementById("decode").innerHTML = decode
+            console.log(decode);
+            return decode;
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: "得意黑";
+            /* 自定义字体的名字 */
+            src: url("font/SmileySans-Oblique.otf") format("opentype");
+            /* 字体文件的路径和格式 */
+        }
+
+        body {
+            background-color: #fff4fda3;
+            font-family: "得意黑";
+            font-weight: normal;
+            font-size: large;
+            line-height: 28px;
+            letter-spacing: 2px;
+            color: #332531;
+        }
+
+        header {
+            font-size: xx-large;
+            text-align: center;
+            margin: 32px;
+            padding: 32px;
+            padding-bottom: 24px;
+            border: #bda8bb8a;
+            border-style: solid;
+            border-width: 0.1px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px #f7c8f0cc;
+            background-color: #ffffffe8;
+        }
+
+        main {
+            font-size: x-large;
+            margin: 48px;
+            padding: 24px;
+            border: #bda8bb8a;
+            border-style: solid;
+            border-width: 0.1px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 12px #f7c8f0cc;
+            background-color: #ffffffe8;
+        }
+
+        .content {
+            background-color: #fff7fd9e;
+            border-radius: 12px;
+            box-shadow: 0px 0px 4px #fbd1f1cf;
+            padding: 12px;
+            margin: 16px 10px;
+            display:grid;
+        }
+
+        textarea {
+            border: none;
+            background-color: #ffffff;
+            border-radius: 4px;
+            margin: 8px;
+            padding: 5px 8px;
+            box-shadow: 0px 0px 2px #c19ccaa6;
+        }
+
+        button {
+            border: none;
+            background-color: #fffafe;
+            border-radius: 4px;
+            margin: 8px;
+            padding: 5px 8px;
+            box-shadow: 0px 0px 2px #c19ccaa6;
+            cursor: pointer;
+        }
+
+        #decode {
+            border: none;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            margin: 8px;
+            padding: 5px 8px;
+            box-shadow: 0px 0px 2px #c19ccaa6;
+            min-height: 128px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>零宽字符隐写
+        <span style="font-size: x-large;">加/解密</span>
+    </header>
+    <main>
+        <div class="content">
+            加密
+            <textarea id="encodeText" cols="30" rows="6">示例文本</textarea>
+            <button name="encode" onclick="encode()">
+                复制加密结果
+            </button>
+        </div>
+        <div class="content">
+            加密
+            <textarea id="decodeText" cols="30" rows="6">加密​​‌‎‪﻿‍‪‪‍﻿‍‎‪‪‍﻿‭‍‌‎‎‪‭‍‍‭‍​﻿‎‪‭‍‎‪‍‬‪​​‍文本</textarea>
+            <button name="decode" onclick="decode()">
+                解密
+            </button>
+            <label id="decode"></label>
+        </div>
+    </main>
+</body>
+
+</html>
