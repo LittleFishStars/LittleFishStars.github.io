@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>教程 on 月落的小窝</title>
-    <link>https://littleFishStars.github.io/tags/%E6%95%99%E7%A8%8B/</link>
+    <link>https://ylxc.netlify.app/tags/%E6%95%99%E7%A8%8B/</link>
     <description>Recent content in 教程 on 月落的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Jul 2023 19:18:20 +0800</lastBuildDate><atom:link href="https://littleFishStars.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jul 2023 19:18:20 +0800</lastBuildDate><atom:link href="https://ylxc.netlify.app/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>外网冲浪指南</title>
-      <link>https://littleFishStars.github.io/posts/program/net_felp/</link>
+      <link>https://ylxc.netlify.app/posts/program/net_felp/</link>
       <pubDate>Wed, 12 Jul 2023 19:18:20 +0800</pubDate>
       
-      <guid>https://littleFishStars.github.io/posts/program/net_felp/</guid>
+      <guid>https://ylxc.netlify.app/posts/program/net_felp/</guid>
       <description>中国大陆外网访问教程 前言 私自访问外网并不合规，但只要不损害国家利益，不非法犀利，保持良好的自我判断，不被国外媒体洗脑，也不会有什么问题。
 如出现问题，作者概不负责。
 1. VPN下载 VPN是访问外网的必备工具，也叫梯子、魔法等
@@ -32,10 +32,10 @@ pixiv</description>
     
     <item>
       <title>使用hugo搭建属于你自己的博客</title>
-      <link>https://littleFishStars.github.io/posts/program/hugo_help/</link>
+      <link>https://ylxc.netlify.app/posts/program/hugo_help/</link>
       <pubDate>Sat, 01 Jul 2023 15:29:43 +0800</pubDate>
       
-      <guid>https://littleFishStars.github.io/posts/program/hugo_help/</guid>
+      <guid>https://ylxc.netlify.app/posts/program/hugo_help/</guid>
       <description>使用hugo搭建个人博客 1. 环境配置 下载git 选择适合你系统的版本下载
 Windows一般就选第二个
 注册github账号
