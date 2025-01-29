@@ -9,6 +9,7 @@
             font-family: '方正楷体';
             src: url("font/FZKTJW.TTF") format('truetype');
         }
+
         @font-face {
             font-family: '方正启体';
             src: url("font/FZQTJW.TTF") format('truetype');
@@ -18,7 +19,6 @@
             background: linear-gradient(135deg, #f6e3ce, #bdc3c7);
             background-attachment: fixed;
             color: #333;
-            padding: 32px;
         }
 
         main {
@@ -52,7 +52,7 @@
             font-size: 0.9em;
             background-color: #ffffff1c;
             height: fit-content;
-            
+
             border: #2d180107;
             border-style: solid;
             border-width: 1px;
@@ -61,10 +61,18 @@
             box-shadow: 0px 0px 12px #f6d5511e;
             padding: 8px 4px;
         }
+
+        #icon {
+            opacity: 0.4;
+            -webkit-filter: grayscale(100%); /* Webkit */
+            filter: grayscale(100%); /* W3C */
+            filter: gray; /* IE6-9 */
+        }
     </style>
 </head>
 
 <body>
+    <header><a href="../"><img id="icon" src="images/icon.svg" alt="" width="48px"></a></header>
     <main>
         「如春花之娇艳，如夏日之耀眼，如秋叶之热烈，如冬雪之静美。<br>
         似花带露而折，似草沐雨而生。集万千芳华于一体，恃宠而不骄，拥才而不傲。不违自然之理，合乎圣贤之道。<br>
