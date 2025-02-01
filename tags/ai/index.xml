@@ -6,7 +6,30 @@
     <description>Recent content in AI on 月落的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 04 Jul 2023 23:29:25 +0800</lastBuildDate><atom:link href="https://ylxc.netlify.app/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 18:48:00 +0800</lastBuildDate><atom:link href="https://ylxc.netlify.app/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>几款国产大模型的对比</title>
+      <link>https://ylxc.netlify.app/posts/program/ai_contrast/</link>
+      <pubDate>Sat, 01 Feb 2025 18:48:00 +0800</pubDate>
+      
+      <guid>https://ylxc.netlify.app/posts/program/ai_contrast/</guid>
+      <description>DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。
+DeepSeek链接
+于是就想着同样的题目给其它模型做做。
+其它大模型 通义千问 我先试了通义千问链接
+表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）
+文小言（文心一言） 然后又试了文心一言链接
+明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。
+讯飞星火 接着我又试了讯飞星火链接
+这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。
+智谱清言 然后是智谱清言链接
+词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。
+豆包 最后是豆包链接
+还是有词牌名的问题，不过诗倒写的还行。
+总结 如此看来，DeepSeek确实牛逼。
+不过暂时还是不知道为什么都搞不清词牌名。</description>
+    </item>
+    
     <item>
       <title>ChatGPT和NewBing国内使用</title>
       <link>https://ylxc.netlify.app/posts/program/ai/</link>

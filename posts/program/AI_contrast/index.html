@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>几款国产大模型的对比 | 月落的小窝</title>
+<meta name="keywords" content="">
+<meta name="description" content="DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。
+DeepSeek链接
+于是就想着同样的题目给其它模型做做。
+其它大模型 通义千问 我先试了通义千问链接
+表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）
+文小言（文心一言） 然后又试了文心一言链接
+明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。
+讯飞星火 接着我又试了讯飞星火链接
+这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。
+智谱清言 然后是智谱清言链接
+词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。
+豆包 最后是豆包链接
+还是有词牌名的问题，不过诗倒写的还行。
+总结 如此看来，DeepSeek确实牛逼。
+不过暂时还是不知道为什么都搞不清词牌名。">
+<meta name="author" content="月落星沉">
+<link rel="icon" href="https://ylxc.netlify.app//images/icon.svg">
+<link rel="canonical" href="https://ylxc.netlify.app/posts/program/ai_contrast/">
+<link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.0c2508b749394299826dc547a4125eee595bd1c5681e24a36dc8e6cb5771cf3b.css">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.0c2508b749394299826dc547a4125eee595bd1c5681e24a36dc8e6cb5771cf3b.css" integrity="sha256-DCUIt0k5QpmCbcVHpBJe7llb0cVoHiSjbcjmy1dxzzs=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+        onload="hljs.initHighlightingOnLoad();"></script>
+<script async src="https://analytics.umami.is/script.js" data-website-id="0b8e5ba2-a310-4c5f-8daa-9955a2cd2bd8"></script>
+<link rel="icon" href="https://ylxc.netlify.app/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ylxc.netlify.app/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ylxc.netlify.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ylxc.netlify.app/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ylxc.netlify.app/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+   
+  
+
+</script>
+<meta property="og:title" content="几款国产大模型的对比" />
+<meta property="og:description" content="DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。
+DeepSeek链接
+于是就想着同样的题目给其它模型做做。
+其它大模型 通义千问 我先试了通义千问链接
+表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）
+文小言（文心一言） 然后又试了文心一言链接
+明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。
+讯飞星火 接着我又试了讯飞星火链接
+这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。
+智谱清言 然后是智谱清言链接
+词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。
+豆包 最后是豆包链接
+还是有词牌名的问题，不过诗倒写的还行。
+总结 如此看来，DeepSeek确实牛逼。
+不过暂时还是不知道为什么都搞不清词牌名。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ylxc.netlify.app/posts/program/ai_contrast/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-02-01T18:48:00+08:00" />
+<meta property="article:modified_time" content="2025-02-01T18:48:00+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="几款国产大模型的对比"/>
+<meta name="twitter:description" content="DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。
+DeepSeek链接
+于是就想着同样的题目给其它模型做做。
+其它大模型 通义千问 我先试了通义千问链接
+表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）
+文小言（文心一言） 然后又试了文心一言链接
+明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。
+讯飞星火 接着我又试了讯飞星火链接
+这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。
+智谱清言 然后是智谱清言链接
+词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。
+豆包 最后是豆包链接
+还是有词牌名的问题，不过诗倒写的还行。
+总结 如此看来，DeepSeek确实牛逼。
+不过暂时还是不知道为什么都搞不清词牌名。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "📚文章",
+          "item": "https://ylxc.netlify.app/posts/"
+        },
+
+        {
+          "@type": "ListItem",
+          "position":  2 ,
+          "name": "技术",
+          "item": "https://ylxc.netlify.app/posts/program/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "几款国产大模型的对比",
+      "item": "https://ylxc.netlify.app/posts/program/ai_contrast/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "几款国产大模型的对比",
+  "name": "几款国产大模型的对比",
+  "description": "DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。\nDeepSeek链接\n于是就想着同样的题目给其它模型做做。\n其它大模型 通义千问 我先试了通义千问链接\n表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）\n文小言（文心一言） 然后又试了文心一言链接\n明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。\n讯飞星火 接着我又试了讯飞星火链接\n这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。\n智谱清言 然后是智谱清言链接\n词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。\n豆包 最后是豆包链接\n还是有词牌名的问题，不过诗倒写的还行。\n总结 如此看来，DeepSeek确实牛逼。\n不过暂时还是不知道为什么都搞不清词牌名。",
+  "keywords": [
+    ""
+  ],
+  "articleBody": "DeepSeek 最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。\nDeepSeek链接\n于是就想着同样的题目给其它模型做做。\n其它大模型 通义千问 我先试了通义千问链接\n表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）\n文小言（文心一言） 然后又试了文心一言链接\n明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。\n讯飞星火 接着我又试了讯飞星火链接\n这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。\n智谱清言 然后是智谱清言链接\n词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。\n豆包 最后是豆包链接\n还是有词牌名的问题，不过诗倒写的还行。\n总结 如此看来，DeepSeek确实牛逼。\n不过暂时还是不知道为什么都搞不清词牌名。\n",
+  "wordCount" : "23",
+  "inLanguage": "en",
+  "datePublished": "2025-02-01T18:48:00+08:00",
+  "dateModified": "2025-02-01T18:48:00+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "月落星沉"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ylxc.netlify.app/posts/program/ai_contrast/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "月落的小窝",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ylxc.netlify.app/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<div id="g-pointer-1"></div>
+<div id="g-pointer-2" style="transform: translate(826px, 214px);"></div>
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ylxc.netlify.app/" accesskey="h" title="月落的小窝 (Alt + H)">
+            <img src="https://ylxc.netlify.app/images/img.jpg" alt="logo" aria-label="logo"
+                 height="35">月落的小窝</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ylxc.netlify.app/" title="🏠主页">
+                <span>🏠主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ylxc.netlify.app/posts" title="📚文章">
+                <span>📚文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ylxc.netlify.app/tags" title="🔖标签">
+                <span>🔖标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ylxc.netlify.app/archives" title="⏱时间轴">
+                <span>⏱时间轴</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page" id="main">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://ylxc.netlify.app/">🏠 Home</a>&nbsp;»&nbsp;<a href="https://ylxc.netlify.app/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://ylxc.netlify.app/posts/program/">技术</a></div>
+            <h1 class="post-title">
+                几款国产大模型的对比
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>February 1, 2025
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>23字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>1分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>月落星沉
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://ylxc.netlify.app/tags/ai/" style="color: var(--secondary)!important;">AI</a>
+            </span>
+        </span>
+    </span>
+</span>
+
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#deepseek" aria-label="DeepSeek">DeepSeek</a></li>
+                <li>
+                    <a href="#%e5%85%b6%e5%ae%83%e5%a4%a7%e6%a8%a1%e5%9e%8b" aria-label="其它大模型">其它大模型</a><ul>
+                        
+                <li>
+                    <a href="#%e9%80%9a%e4%b9%89%e5%8d%83%e9%97%ae" aria-label="通义千问">通义千问</a></li>
+                <li>
+                    <a href="#%e6%96%87%e5%b0%8f%e8%a8%80%e6%96%87%e5%bf%83%e4%b8%80%e8%a8%80" aria-label="文小言（文心一言）">文小言（文心一言）</a></li>
+                <li>
+                    <a href="#%e8%ae%af%e9%a3%9e%e6%98%9f%e7%81%ab" aria-label="讯飞星火">讯飞星火</a></li>
+                <li>
+                    <a href="#%e6%99%ba%e8%b0%b1%e6%b8%85%e8%a8%80" aria-label="智谱清言">智谱清言</a></li>
+                <li>
+                    <a href="#%e8%b1%86%e5%8c%85" aria-label="豆包">豆包</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a>
+                </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = window.innerWidth;
+        if (width >= 1120) {
+            document.getElementById("toc-container").classList.add("wide");
+            document.getElementById("main").classList.add("page");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+            document.getElementById("main").classList.remove("page");
+        }
+        
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <script>
+            if(!(document.getElementById("toc-container")))
+            {
+                document.getElementById("main").classList.remove("page");
+            }
+        </script>
+        <div class="post-content"><h1 id="deepseek">DeepSeek<a hidden class="anchor" aria-hidden="true" href="#deepseek">#</a></h1>
+<p>最近DeepSeek挺火的，今天突发奇想让它写了首诗，没想到写的还挺好。</p>
+<p><img loading="lazy" src="deepseek.jpg" alt="DeepSeek"  />
+</p>
+<blockquote>
+<p><a href="https://chat.deepseek.com/">DeepSeek链接</a></p>
+</blockquote>
+<p>于是就想着同样的题目给其它模型做做。</p>
+<h1 id="其它大模型">其它大模型<a hidden class="anchor" aria-hidden="true" href="#其它大模型">#</a></h1>
+<h2 id="通义千问">通义千问<a hidden class="anchor" aria-hidden="true" href="#通义千问">#</a></h2>
+<p>我先试了通义千问<a href="https://tongyi.aliyun.com/qianwen/">链接</a></p>
+<p><img loading="lazy" src="tyqw.jpg" alt="通义千问"  />
+</p>
+<p>表现还可以，不过搞不清词牌名到是个问题（此时我还没有意识到这个问题有多普遍）</p>
+<h2 id="文小言文心一言">文小言（文心一言）<a hidden class="anchor" aria-hidden="true" href="#文小言文心一言">#</a></h2>
+<p>然后又试了文心一言<a href="https://yiyan.baidu.com/">链接</a></p>
+<p><img loading="lazy" src="wxy.png" alt="文心一言"  />
+</p>
+<p>明显没有通义千问好，而且也搞不清楚词牌名，这时我有点感觉这大概是个普遍问题，不过这点DeepSeek倒是挺好。</p>
+<h2 id="讯飞星火">讯飞星火<a hidden class="anchor" aria-hidden="true" href="#讯飞星火">#</a></h2>
+<p>接着我又试了讯飞星火<a href="https://xinghuo.xfyun.cn/desk">链接</a></p>
+<p><img loading="lazy" src="xfxh.jpg" alt="讯飞星火"  />
+</p>
+<p>这个就更加一言难尽，我跟它说词牌名不对它还一直固执己见。</p>
+<h2 id="智谱清言">智谱清言<a hidden class="anchor" aria-hidden="true" href="#智谱清言">#</a></h2>
+<p>然后是智谱清言<a href="https://chatglm.cn/main/alltoolsdetail?lang=zh">链接</a></p>
+<p><img loading="lazy" src="zpqy.jpg" alt="智谱清言"  />
+</p>
+<p>词牌名的问题依然存在，而且它写的诗有一种东拼西凑的感觉，意境也乱七八糟的。</p>
+<h2 id="豆包">豆包<a hidden class="anchor" aria-hidden="true" href="#豆包">#</a></h2>
+<p>最后是豆包<a href="https://www.doubao.com/chat/">链接</a></p>
+<p><img loading="lazy" src="db.jpeg" alt="豆包"  />
+</p>
+<p>还是有词牌名的问题，不过诗倒写的还行。</p>
+<h1 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h1>
+<p>如此看来，DeepSeek确实牛逼。</p>
+<p>不过暂时还是不知道为什么都搞不清词牌名。</p>
+
+
+        </div>
+
+        <footer class="post-footer">
+            
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 16px;
+        content: '> 展开评论 ...';
+        color: var(--content);
+    }
+
+    .comments_details[open] summary::marker {
+        font-size: 16px;
+        content: 'v  关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);"></span>
+        </summary>
+        <div id="tcomment"></div>
+        <script src="https://utteranc.es/client.js" 
+            repo="LingKongStars/LingKongStars.github.io"
+            issue-term="pathname" 
+            theme="github-light" 
+            crossorigin="anonymous" 
+            async>
+        </script>
+</div>
+</article>
+</main>
+
+<footer class="footer">
+    <span>
+        Copyright
+        &copy;
+        -2025
+        <a href="https://ylxc.netlify.app/" style="color:#939393;">月落的小窝</a>
+        All Rights Reserved
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString();
+                
+                
+                
+                
+                let textData = window.getSelection().toString();
+                
+                
+                
+                
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
