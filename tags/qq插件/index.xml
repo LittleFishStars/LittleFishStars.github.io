@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>QQ插件 on 月落的小窝</title>
+    <link>https://ylxc.netlify.app/tags/qq%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in QQ插件 on 月落的小窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 03 Feb 2025 21:18:02 +0800</lastBuildDate><atom:link href="https://ylxc.netlify.app/tags/qq%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LiteLoaderQQNT-QQNT插件加载器</title>
+      <link>https://ylxc.netlify.app/posts/program/liteloaderqqnt/</link>
+      <pubDate>Mon, 03 Feb 2025 21:18:02 +0800</pubDate>
+      
+      <guid>https://ylxc.netlify.app/posts/program/liteloaderqqnt/</guid>
+      <description>介绍 LiteLoaderQQNT 是一个 QQNT 的插件加载器，它可以让你自由地为 QQNT 添加各种插件， 并实现例如美化主题、增加功能等各种功能，支持 QQNT 桌面端 全架构。
+官网：LiteLoaderQQNT
+开源地址：github
+警告1：防撤回插件有封号风险，请谨慎使用（见此issues），其它插件情况不明。
+警告2：请勿在 QQ 官方群聊发送任何可以看出你使用了第三方插件的截图， 也不要在 QQ 官方群聊和任何影响力较大的简中互联网平台（包括但不限于: 哔哩哔哩，微博，知乎，抖音等）发布和讨论任何与本项目存在相关性的信息
+安装 请设置显示文件扩展名并关闭QQ以便于接下来操作
+官方文档：安装|LiteLoaderQQNT
+下载 LiteLoaderQQNT 以下两种下载方式均可
+使用git 如果安装了git，则可直接克隆仓库：
+git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动下载 点我下载
+将文件解压至任何一个你喜欢的位置，记下package.json文件所在文件夹的路径，这就是LiteLoaderQQNT的安装路径
+下载补丁文件 访问网址
+下载dbghelp_x64.dll（64位系统）或dbghelp_x86.dll（32位系统）
+不知道自己是64位系统还是32位系统？ 请在设置-&amp;gt;系统-&amp;gt;系统信息中的系统类型中查看
+找到QQ的安装目录（一般为C:\Program Files\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll
+修改配置 打开QQNT\versions\版本号\resources\app或QQNT\resources\app
+找到package.json并打开，将&amp;quot;main&amp;quot;后面的路径改为&amp;quot;./app_launcher/LiteLoaderQQNT.js&amp;quot;
+打开app_launcher文件夹
+新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存
+建议将未修改的文件备份以便于恢复
+打开QQ 如果操作无误，打开QQ后，在设置中左侧列表应出现LiteLoaderQQNT选项
+如果无法打开QQ，请即使将以上所有操作复原并重试。如果还是无法打开，请将QQ卸载并重新安装。
+插件 在 LiteLoaderQQNT主页 中可以找到其它用户开发的LiteLoaderQQNT插件
+下载插件 建议先下载此插件：插件列表查看
+打开网页后，下载list-viewer.zip文件，解压至LiteLoaderQQNT的安装路径下的plugins文件夹中，重启QQ
+以后你就可以直接在QQ设置-&amp;gt;插件列表查看中下载想要的插件了
+有关插件列表查看的更多信息请见：插件列表查看的github仓库
+插件开发 请见：官方文档</description>
+    </item>
+    
+  </channel>
+</rss>
