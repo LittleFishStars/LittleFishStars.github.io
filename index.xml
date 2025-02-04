@@ -30,6 +30,7 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
 找到QQ的安装目录（一般为C:\Program Files\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll
 修改配置 打开QQNT\versions\版本号\resources\app或QQNT\resources\app
 找到package.json并打开，将&amp;quot;main&amp;quot;后面的路径改为&amp;quot;./app_launcher/LiteLoaderQQNT.js&amp;quot;
+原本为&amp;quot;./application.asar/app_launcher/index.js&amp;quot;
 打开app_launcher文件夹
 新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存
 建议将未修改的文件备份以便于恢复

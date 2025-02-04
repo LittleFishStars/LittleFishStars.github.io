@@ -24,6 +24,7 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
 找到QQ的安装目录（一般为C:\Program Files\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll
 修改配置 打开QQNT\versions\版本号\resources\app或QQNT\resources\app
 找到package.json并打开，将&quot;main&quot;后面的路径改为&quot;./app_launcher/LiteLoaderQQNT.js&quot;
+原本为&quot;./application.asar/app_launcher/index.js&quot;
 打开app_launcher文件夹
 新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存
 建议将未修改的文件备份以便于恢复
@@ -127,6 +128,7 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
 找到QQ的安装目录（一般为C:\Program Files\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll
 修改配置 打开QQNT\versions\版本号\resources\app或QQNT\resources\app
 找到package.json并打开，将&quot;main&quot;后面的路径改为&quot;./app_launcher/LiteLoaderQQNT.js&quot;
+原本为&quot;./application.asar/app_launcher/index.js&quot;
 打开app_launcher文件夹
 新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存
 建议将未修改的文件备份以便于恢复
@@ -162,6 +164,7 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
 找到QQ的安装目录（一般为C:\Program Files\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll
 修改配置 打开QQNT\versions\版本号\resources\app或QQNT\resources\app
 找到package.json并打开，将&quot;main&quot;后面的路径改为&quot;./app_launcher/LiteLoaderQQNT.js&quot;
+原本为&quot;./application.asar/app_launcher/index.js&quot;
 打开app_launcher文件夹
 新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存
 建议将未修改的文件备份以便于恢复
@@ -209,12 +212,12 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
   "@type": "BlogPosting",
   "headline": "LiteLoaderQQNT-QQNT插件加载器",
   "name": "LiteLoaderQQNT-QQNT插件加载器",
-  "description": "介绍 LiteLoaderQQNT 是一个 QQNT 的插件加载器，它可以让你自由地为 QQNT 添加各种插件， 并实现例如美化主题、增加功能等各种功能，支持 QQNT 桌面端 全架构。\n官网：LiteLoaderQQNT\n开源地址：github\n警告1：防撤回插件有封号风险，请谨慎使用（见此issues），其它插件情况不明。\n警告2：请勿在 QQ 官方群聊发送任何可以看出你使用了第三方插件的截图， 也不要在 QQ 官方群聊和任何影响力较大的简中互联网平台（包括但不限于: 哔哩哔哩，微博，知乎，抖音等）发布和讨论任何与本项目存在相关性的信息\n安装 请设置显示文件扩展名并关闭QQ以便于接下来操作\n官方文档：安装|LiteLoaderQQNT\n下载 LiteLoaderQQNT 以下两种下载方式均可\n使用git 如果安装了git，则可直接克隆仓库：\ngit clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动下载 点我下载\n将文件解压至任何一个你喜欢的位置，记下package.json文件所在文件夹的路径，这就是LiteLoaderQQNT的安装路径\n下载补丁文件 访问网址\n下载dbghelp_x64.dll（64位系统）或dbghelp_x86.dll（32位系统）\n不知道自己是64位系统还是32位系统？ 请在设置-\u0026gt;系统-\u0026gt;系统信息中的系统类型中查看\n找到QQ的安装目录（一般为C:\\Program Files\\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll\n修改配置 打开QQNT\\versions\\版本号\\resources\\app或QQNT\\resources\\app\n找到package.json并打开，将\u0026quot;main\u0026quot;后面的路径改为\u0026quot;./app_launcher/LiteLoaderQQNT.js\u0026quot;\n打开app_launcher文件夹\n新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存\n建议将未修改的文件备份以便于恢复\n打开QQ 如果操作无误，打开QQ后，在设置中左侧列表应出现LiteLoaderQQNT选项\n如果无法打开QQ，请即使将以上所有操作复原并重试。如果还是无法打开，请将QQ卸载并重新安装。\n插件 在 LiteLoaderQQNT主页 中可以找到其它用户开发的LiteLoaderQQNT插件\n下载插件 建议先下载此插件：插件列表查看\n打开网页后，下载list-viewer.zip文件，解压至LiteLoaderQQNT的安装路径下的plugins文件夹中，重启QQ\n以后你就可以直接在QQ设置-\u0026gt;插件列表查看中下载想要的插件了\n有关插件列表查看的更多信息请见：插件列表查看的github仓库\n插件开发 请见：官方文档",
+  "description": "介绍 LiteLoaderQQNT 是一个 QQNT 的插件加载器，它可以让你自由地为 QQNT 添加各种插件， 并实现例如美化主题、增加功能等各种功能，支持 QQNT 桌面端 全架构。\n官网：LiteLoaderQQNT\n开源地址：github\n警告1：防撤回插件有封号风险，请谨慎使用（见此issues），其它插件情况不明。\n警告2：请勿在 QQ 官方群聊发送任何可以看出你使用了第三方插件的截图， 也不要在 QQ 官方群聊和任何影响力较大的简中互联网平台（包括但不限于: 哔哩哔哩，微博，知乎，抖音等）发布和讨论任何与本项目存在相关性的信息\n安装 请设置显示文件扩展名并关闭QQ以便于接下来操作\n官方文档：安装|LiteLoaderQQNT\n下载 LiteLoaderQQNT 以下两种下载方式均可\n使用git 如果安装了git，则可直接克隆仓库：\ngit clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动下载 点我下载\n将文件解压至任何一个你喜欢的位置，记下package.json文件所在文件夹的路径，这就是LiteLoaderQQNT的安装路径\n下载补丁文件 访问网址\n下载dbghelp_x64.dll（64位系统）或dbghelp_x86.dll（32位系统）\n不知道自己是64位系统还是32位系统？ 请在设置-\u0026gt;系统-\u0026gt;系统信息中的系统类型中查看\n找到QQ的安装目录（一般为C:\\Program Files\\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll\n修改配置 打开QQNT\\versions\\版本号\\resources\\app或QQNT\\resources\\app\n找到package.json并打开，将\u0026quot;main\u0026quot;后面的路径改为\u0026quot;./app_launcher/LiteLoaderQQNT.js\u0026quot;\n原本为\u0026quot;./application.asar/app_launcher/index.js\u0026quot;\n打开app_launcher文件夹\n新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存\n建议将未修改的文件备份以便于恢复\n打开QQ 如果操作无误，打开QQ后，在设置中左侧列表应出现LiteLoaderQQNT选项\n如果无法打开QQ，请即使将以上所有操作复原并重试。如果还是无法打开，请将QQ卸载并重新安装。\n插件 在 LiteLoaderQQNT主页 中可以找到其它用户开发的LiteLoaderQQNT插件\n下载插件 建议先下载此插件：插件列表查看\n打开网页后，下载list-viewer.zip文件，解压至LiteLoaderQQNT的安装路径下的plugins文件夹中，重启QQ\n以后你就可以直接在QQ设置-\u0026gt;插件列表查看中下载想要的插件了\n有关插件列表查看的更多信息请见：插件列表查看的github仓库\n插件开发 请见：官方文档",
   "keywords": [
     ""
   ],
-  "articleBody": "介绍 LiteLoaderQQNT 是一个 QQNT 的插件加载器，它可以让你自由地为 QQNT 添加各种插件， 并实现例如美化主题、增加功能等各种功能，支持 QQNT 桌面端 全架构。\n官网：LiteLoaderQQNT\n开源地址：github\n警告1：防撤回插件有封号风险，请谨慎使用（见此issues），其它插件情况不明。\n警告2：请勿在 QQ 官方群聊发送任何可以看出你使用了第三方插件的截图， 也不要在 QQ 官方群聊和任何影响力较大的简中互联网平台（包括但不限于: 哔哩哔哩，微博，知乎，抖音等）发布和讨论任何与本项目存在相关性的信息\n安装 请设置显示文件扩展名并关闭QQ以便于接下来操作\n官方文档：安装|LiteLoaderQQNT\n下载 LiteLoaderQQNT 以下两种下载方式均可\n使用git 如果安装了git，则可直接克隆仓库：\ngit clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动下载 点我下载\n将文件解压至任何一个你喜欢的位置，记下package.json文件所在文件夹的路径，这就是LiteLoaderQQNT的安装路径\n下载补丁文件 访问网址\n下载dbghelp_x64.dll（64位系统）或dbghelp_x86.dll（32位系统）\n不知道自己是64位系统还是32位系统？ 请在设置-\u003e系统-\u003e系统信息中的系统类型中查看\n找到QQ的安装目录（一般为C:\\Program Files\\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll\n修改配置 打开QQNT\\versions\\版本号\\resources\\app或QQNT\\resources\\app\n找到package.json并打开，将\"main\"后面的路径改为\"./app_launcher/LiteLoaderQQNT.js\"\n打开app_launcher文件夹\n新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存\n建议将未修改的文件备份以便于恢复\n打开QQ 如果操作无误，打开QQ后，在设置中左侧列表应出现LiteLoaderQQNT选项\n如果无法打开QQ，请即使将以上所有操作复原并重试。如果还是无法打开，请将QQ卸载并重新安装。\n插件 在 LiteLoaderQQNT主页 中可以找到其它用户开发的LiteLoaderQQNT插件\n下载插件 建议先下载此插件：插件列表查看\n打开网页后，下载list-viewer.zip文件，解压至LiteLoaderQQNT的安装路径下的plugins文件夹中，重启QQ\n以后你就可以直接在QQ设置-\u003e插件列表查看中下载想要的插件了\n有关插件列表查看的更多信息请见：插件列表查看的github仓库\n插件开发 请见：官方文档\n",
-  "wordCount" : "67",
+  "articleBody": "介绍 LiteLoaderQQNT 是一个 QQNT 的插件加载器，它可以让你自由地为 QQNT 添加各种插件， 并实现例如美化主题、增加功能等各种功能，支持 QQNT 桌面端 全架构。\n官网：LiteLoaderQQNT\n开源地址：github\n警告1：防撤回插件有封号风险，请谨慎使用（见此issues），其它插件情况不明。\n警告2：请勿在 QQ 官方群聊发送任何可以看出你使用了第三方插件的截图， 也不要在 QQ 官方群聊和任何影响力较大的简中互联网平台（包括但不限于: 哔哩哔哩，微博，知乎，抖音等）发布和讨论任何与本项目存在相关性的信息\n安装 请设置显示文件扩展名并关闭QQ以便于接下来操作\n官方文档：安装|LiteLoaderQQNT\n下载 LiteLoaderQQNT 以下两种下载方式均可\n使用git 如果安装了git，则可直接克隆仓库：\ngit clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动下载 点我下载\n将文件解压至任何一个你喜欢的位置，记下package.json文件所在文件夹的路径，这就是LiteLoaderQQNT的安装路径\n下载补丁文件 访问网址\n下载dbghelp_x64.dll（64位系统）或dbghelp_x86.dll（32位系统）\n不知道自己是64位系统还是32位系统？ 请在设置-\u003e系统-\u003e系统信息中的系统类型中查看\n找到QQ的安装目录（一般为C:\\Program Files\\Tencent） 将下载的文件复制到QQNT文件夹中，并把文件名改为dbghelp.dll\n修改配置 打开QQNT\\versions\\版本号\\resources\\app或QQNT\\resources\\app\n找到package.json并打开，将\"main\"后面的路径改为\"./app_launcher/LiteLoaderQQNT.js\"\n原本为\"./application.asar/app_launcher/index.js\"\n打开app_launcher文件夹\n新建一个文本文件，把文件名改为LiteLoaderQQNT.js。 打开文件，在其中输入require(String.raw`LiteLoaderQQNT的安装路径`)。 保存\n建议将未修改的文件备份以便于恢复\n打开QQ 如果操作无误，打开QQ后，在设置中左侧列表应出现LiteLoaderQQNT选项\n如果无法打开QQ，请即使将以上所有操作复原并重试。如果还是无法打开，请将QQ卸载并重新安装。\n插件 在 LiteLoaderQQNT主页 中可以找到其它用户开发的LiteLoaderQQNT插件\n下载插件 建议先下载此插件：插件列表查看\n打开网页后，下载list-viewer.zip文件，解压至LiteLoaderQQNT的安装路径下的plugins文件夹中，重启QQ\n以后你就可以直接在QQ设置-\u003e插件列表查看中下载想要的插件了\n有关插件列表查看的更多信息请见：插件列表查看的github仓库\n插件开发 请见：官方文档\n",
+  "wordCount" : "68",
   "inLanguage": "en",
   "datePublished": "2025-02-03T21:18:02+08:00",
   "dateModified": "2025-02-03T21:18:02+08:00",
@@ -366,7 +369,7 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>67字
+        <span>68字
             &nbsp;&nbsp;
         </span>
     </span>
@@ -543,6 +546,9 @@ git clone --depth 1 https://github.com/LiteLoaderQQNT/LiteLoaderQQNT.git 手动�
 <h2 id="修改配置">修改配置<a hidden class="anchor" aria-hidden="true" href="#修改配置">#</a></h2>
 <p>打开<code>QQNT\versions\版本号\resources\app</code>或<code>QQNT\resources\app</code></p>
 <p>找到<code>package.json</code>并打开，将<code>&quot;main&quot;</code>后面的路径改为<code>&quot;./app_launcher/LiteLoaderQQNT.js&quot;</code></p>
+<blockquote>
+<p>原本为<code>&quot;./application.asar/app_launcher/index.js&quot;</code></p>
+</blockquote>
 <p>打开<code>app_launcher</code>文件夹</p>
 <p>新建一个文本文件，把文件名改为<code>LiteLoaderQQNT.js</code>。
 打开文件，在其中输入<code>require(String.raw`LiteLoaderQQNT的安装路径`)</code>。
